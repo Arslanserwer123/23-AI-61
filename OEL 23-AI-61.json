@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "kernelspec": {
+      "name": "python",
+      "display_name": "Python (Pyodide)",
+      "language": "python"
+    },
+    "language_info": {
+      "codemirror_mode": {
+        "name": "python",
+        "version": 3
+      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.8"
+    }
+  },
+  "nbformat_minor": 5,
+  "nbformat": 4,
+  "cells": [
+    {
+      "id": "22f59ada-d9dd-4186-b8ef-b8b10ac77beb",
+      "cell_type": "code",
+      "source": "#Rollno 23-AI-61\ndef longest_palindrome(s):\n    char_count = {}\n    for char in s:\n        char_count[char] = char_count.get(char, 0) + 1\n\n    palindrome_length = 0\n    odd_found = False\n\n    for count in char_count.values():\n        palindrome_length += count // 2 * 2\n        if count % 2 == 1:\n            odd_found = True\n\n    if odd_found:\n        palindrome_length += 1\n\n    return palindrome_length\n\n# Example usage\nif __name__ == \"__main__\":\n    s1 = \"abccccdd\"\n    print(longest_palindrome(s1))  # Output: 7\n\n    s2 = \"a\"\n    print(longest_palindrome(s2))  # Output: 1\n",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "7\n1\n"
+        }
+      ],
+      "execution_count": 1
+    },
+    {
+      "id": "8e6c4e12-fe28-47d9-bb84-a78297d38867",
+      "cell_type": "code",
+      "source": "",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [],
+      "execution_count": null
+    },
+    {
+      "id": "35241de9-fb1d-4aab-b6c6-f53ee970348c",
+      "cell_type": "code",
+      "source": "",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [],
+      "execution_count": null
+    }
+  ]
+}
